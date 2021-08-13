@@ -1,0 +1,4 @@
+git+https://github.com/DarkMetalMouse/py-vox-io.git
+ansicolors
+numpy
+nbtlib
