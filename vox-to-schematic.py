@@ -1,10 +1,9 @@
 from pyvox.parser import VoxParser
-#from nbtschematic import SchematicFile
 from nbtschem import SchematicFile
 from colors import color
 
-INPUT_FILE = "C:/voxels/model.vox"
-OUTPUT_FILE = "C:/voxels/model.schematic"
+INPUT_FILE = "hitmonchan_one.vox"
+OUTPUT_FILE = "model.schematic"
 
 colors = {}
 
@@ -22,6 +21,6 @@ for voxel in vox_file.models[0].voxels:
         print(f"found color: {color(hex_code, inverted, hex_code)} ({vox_color})")
         colors[vox_color] = input("Enter block name: > ")
 
-    sf.set_block((z,y,x),colors[vox_color])
+    sf.set_block((z,x,y),colors[vox_color])
 print(colors)
 sf.save(OUTPUT_FILE)
